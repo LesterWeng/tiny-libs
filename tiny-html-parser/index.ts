@@ -13,11 +13,7 @@ const HTML_REG = {
   startTag: /^<[a-z]+>/,
   endTag: /^<\/[a-z]+>/,
 }
-const getValue = (html, reg) => {
-  const match = html.match(reg)
-  return match && match[0].slice(1, -1)
-}
-// tokenizer ？
+// tokenizer
 const htmlToToken: (html: string) => Token[] = (
   html,
 ) => {
